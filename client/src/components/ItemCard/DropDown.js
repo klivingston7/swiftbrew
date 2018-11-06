@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Component } from "react";
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-export default class DropDown extends React.Component {
+export default class DropDown extends Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.changeText = this.changeText.bind(this);
+
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      value: "Size"
+      
     };
   }
 
@@ -17,16 +21,25 @@ export default class DropDown extends React.Component {
     });
   }
 
+  changeText(e) {
+    e.preventDefault();
+
+    this.setState({
+      value: e.target.value
+    });
+
+  }
+
   render() {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Size
+          {this.state.value}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Small</DropdownItem>
-          <DropdownItem>Medium</DropdownItem>
-          <DropdownItem>Large</DropdownItem>
+          <DropdownItem onClick = {this.changeText} value = "Small">Small</DropdownItem>
+          <DropdownItem onClick = {this.changeText} value = "Medium">Medium</DropdownItem>
+          <DropdownItem onClick = {this.changeText} value = "Large">Large</DropdownItem>
         </DropdownMenu>
       </ButtonDropdown>
     );

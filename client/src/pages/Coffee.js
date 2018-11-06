@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import API from "../utils/API"
 import {Container, Row, Col} from 'reactstrap';
 import ItemCard from '../components/ItemCard';
+import { Link } from 'react-router-dom';
 
 class Coffee extends Component {
   state = {
     coffee: [],
+    order: [],
   };
 
   componentDidMount() {
@@ -30,7 +32,12 @@ class Coffee extends Component {
       <div>
         <Container>
           <Row>
-            <h1>Coffee</h1>
+            <Col sm = "11">
+              <h1>Coffee</h1>
+            </Col>
+            <Col>
+              <Link to = "/checkout">Cart</Link>
+            </Col>
           </Row>
           <Row>
               {this.state.coffee.map(coffee => (

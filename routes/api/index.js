@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const shoppingRoutes = require("./shoppingCart");
+const coffeeRoutes = require("./coffee");
 
 // coffee routes
-router.use("/coffee", shoppingRoutes);
+router.use("/coffee", coffeeRoutes);
 
 module.exports = router;
