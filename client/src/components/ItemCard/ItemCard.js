@@ -20,6 +20,20 @@ class itemCard extends Component {
   getSize = (sizeVal) => {
     this.setState({size: sizeVal}, function(){
       //this is where your price switch needs to go
+      switch(sizeVal){
+        case "Small":
+          this.setState({price: this.props.social});
+          break;
+        case "Medium":
+          this.setState({price: this.props.daily});
+          break;
+        case "Large":
+          this.setState({price: this.props.kick});
+          break;
+        default:
+          console.log("Error, please add size");
+          break;
+      }
     });
   }
 
@@ -27,7 +41,7 @@ class itemCard extends Component {
     this.setState({
       name: this.props.product_name,
       size: this.state.size,
-      price: 500
+      price: this.state.price
     },function(){
       console.log("this happened")
       console.log(this.state)

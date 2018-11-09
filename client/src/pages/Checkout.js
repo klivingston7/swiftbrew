@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
+import Header from "../components/Header";
+import QRScanner from "../components/QRScanner";
 
-import {Container, Row, Col, Card, CardBody, CardTitle, Table, Button } from 'reactstrap';
+import {Container, Row, Col, Card, CardBody, CardTitle, Table } from 'reactstrap';
 
 class Checkout extends Component {
 
@@ -35,36 +37,35 @@ class Checkout extends Component {
   render(){
     return(
       <Container>
-        <header>
-            <h1>Current Order</h1>
-        </header>
+      <Header />
         <Row>
-            <Col sm="12">
-              <Card>
-                <CardBody>
-                    <CardTitle>Leadership Team</CardTitle>
-                    <Table>
-                      <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Category</th>
-                            <th>Cost</th>
-                            <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      {this.state.cart.map(cart =>(
-                        <tr key = {cart._id}>
-                            <td>{cart.product_name}</td>
-                            <td>{cart.size}</td>
-                            <td>{cart.price}</td>
-                            <td><Button id = {cart._id} onClick = {this.removeFromCart}>X</Button></td>
-                        </tr>
-                      ))}
-                      </tbody>
-                    </Table>
-                </CardBody>
-              </Card>
+          <Col md = "6">
+            <QRScanner />
+          </Col>
+          <Col sm="6">
+            <Card>
+              <CardBody>
+                  <CardTitle>Total: $1,000,000</CardTitle>
+                  <Table>
+                    <thead>
+                      <tr>
+                          <th>Product</th>
+                          <th>Category</th>
+                          <th>Cost</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {this.state.cart.map(cart =>(
+                      <tr key = {cart._id}>
+                          <td>{cart.product_name}</td>
+                          <td>{cart.size}</td>
+                          <td>{cart.price}</td>
+                      </tr>
+                    ))}
+                    </tbody>
+                  </Table>
+              </CardBody>
+            </Card>
           </Col>
         </Row>
       </Container>

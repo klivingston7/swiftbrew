@@ -9,8 +9,6 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   addCoffeeToCart: function(req, res) {
-    console.log("Firing")
-    console.log(req.body);
     db.Cart
       .create(req.body)
       .then(dbModel => res.json(dbModel))

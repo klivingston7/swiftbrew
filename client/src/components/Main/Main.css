@@ -1,0 +1,160 @@
+/* .main {
+    padding-top: 50px;
+    background: #ECEFF1;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+  } */
+  body {
+    background: none;
+    font-family: "Titillium Web", sans-serif;
+  }
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  .carH {
+    font-size: 4.5rem !important;
+  } 
+  .carCap {
+    font-weight: 400 !important;
+    font-size: 1.5rem !important;
+  }
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 23rem;
+    background-color: #93b0b99d;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+  .first-slide, .second-slide, .third-slide {
+    opacity: .6;
+  }
+  .car-Btn {
+    padding: 18px, 30px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 2px solid #628895;
+    text-decoration: none;
+    background-color: #628895;
+    color: #FFF;
+    margin-top: 12px;
+    }
+    .car-Btn:hover {
+    border: 2px solid #628895;
+    border: 2px solid #3e6875;
+    background-color: transparent;
+    color: #3e6875;
+    }
+
+    .tab-group {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+    }
+    .tab-group:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .tab-group li a {
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      background: #62889549;
+      color: #628895;
+      font-size: 20px;
+      float: left;
+      width: 25%;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
+    .tab-group li a:hover {
+      background: #628895;
+      color: #ffffff;
+    }
+    .tab-group a.active {
+      background: #3b5e69;
+      color: #ffffff;
+    }
+    
+    .tab-content > div:last-child {
+      display: none;
+    }
+
+/*  Columns  */
+.colHead {
+    margin-top: 0px !important;
+}
+.colOver {
+    position: relative;
+  }
+  .columnImg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #628895;
+  }
+  
+  .colOver:hover .overlay {
+    opacity: .9;
+  }
+  
+  .text {
+    color: white;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+  }
+  .col-Btn {
+    padding: 18px, 30px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 2px solid #3e6875;
+    text-decoration: none;
+    color: #3e6875;
+    background-color: transparent;
+    margin-top: 12px;
+    }
+    .col-Btn:hover {
+    border: 2px solid #628895;
+    background-color: #628895;
+    color: #FFF;
+    }

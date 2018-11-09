@@ -1,21 +1,35 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainTabs from "./pages/MainTabs";
 import Home from "./pages/Home";
-import Coffee from "./pages/Coffee";
+import Menu from "./pages/Menu";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout"
-// import Nav from "./components/Nav";
+import Checkout from "./pages/Checkout";
 
 const App = () => (
   <Router>
     <div>
-      {/* <Nav /> */}
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/coffee" component={Coffee} />
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/checkout" component={Checkout} />
-        {/* <Route component={NoMatch} /> */}
+        <Route exact path={"/signup"}>
+            <div className="container text-center">
+            <img class="mainImg" src="/media/CSB.png" alt="" />
+              <div className="form">
+                <MainTabs type="signup" />
+              </div>
+            </div>
+        </Route>
+        <Route exact path={["/","/signin"]}>
+            <div className="container text-center">
+            <img class="mainImg" src="/media/CSB.png" alt="" />
+              <div className="form">
+                <MainTabs type="signin" />
+              </div>
+            </div>
+        </Route>
+        <Route exact path="/home" component={Home} />
+        <Route path="/menu" component={Menu} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/checkout" component={Checkout} />
       </Switch>
     </div>
   </Router>
