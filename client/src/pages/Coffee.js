@@ -5,10 +5,14 @@ import ItemCard from '../components/ItemCard';
 import { Link } from 'react-router-dom';
 
 class Coffee extends Component {
-  state = {
-    coffee: [],
-    order: [],
-  };
+  constructor(props){
+    super(props)
+
+    this.state = {
+      coffee: [],
+    };
+
+  }
 
   componentDidMount() {
     this.loadCoffee();
@@ -18,14 +22,12 @@ class Coffee extends Component {
     
     API.getCoffee()
       .then(res => {
-        this.setState({
-          coffee: res.data,
-        })
-        console.log(this.state.coffee)
+        this.setState({coffee: res.data})
        }
       )
       .catch(err => console.log(err));
   };
+
 
   render() {
     return (
@@ -36,12 +38,12 @@ class Coffee extends Component {
               <h1>Coffee</h1>
             </Col>
             <Col>
-              <Link to = "/checkout">Cart</Link>
+              <Link to = "/cart">Cart</Link>
             </Col>
           </Row>
           <Row>
               {this.state.coffee.map(coffee => (
-                <Col sm = "6"><ItemCard {...coffee}></ItemCard></Col>
+                <Col sm = "6" key = {coffee._id}><ItemCard {...coffee}></ItemCard></Col>
               ))}
           </Row>
         </Container>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import API from "../../utils/API"
 import { Card, CardBody, CardTitle, Table, Button} from 'reactstrap';
-import API from "../../utils/API";
 
 import DropDown from './DropDown';
 
@@ -8,31 +8,48 @@ class itemCard extends Component {
   constructor(props) {
     super(props);
 
+    this.addToCart = this.addToCart.bind(this);
+
     this.state = {
-      name: "Coffee",
-      size: "Small",
-      price: "$2.00"
+      name: "",
+      size: "",
+      price: 0
     }
   }
 
-  addToCart(e){
-    e.preventDefault();
-    console.log("added!");
-
-
-    API.addCoffeeToCart(this.state)
-    
-
+  getSize = (sizeVal) => {
+    this.setState({size: sizeVal}, function(){
+      //this is where your price switch needs to go
+    });
   }
+
+  addToCart = () => {
+    this.setState({
+      name: this.props.product_name,
+      size: this.state.size,
+      price: 500
+    },function(){
+      console.log("this happened")
+      console.log(this.state)
+      API.addCoffeeToCart({
+        product_name: this.state.name,
+        size: this.state.size,
+        price: this.state.price
+      })
+      .then(console.log("posted"))
+      .catch(err => console.log(err));
+    });
+  
+    }
 
   render(){
 
     return(
   
-    <Card key = {this.props._id}>
+    <Card>
       <CardBody>
         <h2>{this.props.product_name}</h2>
-        {/* <img id="productPic" src={props.product_picture} alt = ""/> */}
+        <img id="productPic" src={this.props.product_picture} alt = ""/>
 
         <CardTitle> {this.props.product_type} {this.props.product_category}</CardTitle>
 
@@ -61,8 +78,9 @@ class itemCard extends Component {
           </tr>
           </tbody>
         </Table>
-        <DropDown />
-        <Button className="btn col-Btn" id="to-cart" role="button" value = {this.props._id} onClick = {this.addToCart}>
+        <DropDown getSize = {this.getSize}/>
+        <Button className="btn col-Btn" id="to-cart" role="button" value = {this.props._id} 
+                onClick = {this.addToCart}>
           Add to Cart
         </Button>
       </CardBody>

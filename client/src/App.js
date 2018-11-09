@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Coffee from "./pages/Coffee";
-// import Cart from "./pages/Cart";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout"
 // import Nav from "./components/Nav";
 
 const App = () => (
@@ -12,7 +13,8 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/coffee" component={Coffee} />
-        {/* <Route exact path="/cart" component={Cart} /> */}
+        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/checkout" component={Checkout} />
         {/* <Route component={NoMatch} /> */}
       </Switch>
     </div>

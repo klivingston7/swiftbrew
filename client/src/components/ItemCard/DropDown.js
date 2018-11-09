@@ -7,6 +7,7 @@ export default class DropDown extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.changeText = this.changeText.bind(this);
+    this.handleSizeChange = this.handleSizeChange.bind(this);
 
     this.state = {
       dropdownOpen: false,
@@ -28,11 +29,20 @@ export default class DropDown extends Component {
       value: e.target.value
     });
 
+
+    this.props.getSize(e.target.value);
+
+  }
+
+  handleSizeChange = () => {
+    const size = this.state.value;
+    console.log(size)
+    this.props.getSize(size);
   }
 
   render() {
     return (
-      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} onChange = {this.handleSizeChange}>
         <DropdownToggle caret>
           {this.state.value}
         </DropdownToggle>

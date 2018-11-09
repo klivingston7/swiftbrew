@@ -1,3 +1,4 @@
 module.exports = {
-  Coffee: require("./Coffee")
+  Coffee: require("./Coffee"),
+  Cart: require("./Cart")
 };

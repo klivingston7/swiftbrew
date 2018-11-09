@@ -8,7 +8,7 @@ mongoose.connect (
 
 const coffeeSeed = [
   {
-    product_picture: '%PUBLIC_URL%/images/IceCoffeeVanilla.png',
+    product_picture: '/images/IceCoffeeVanilla.png',
     product_category: 'Coffee',
     product_type: 'Cold',
     product_name: 'Iced Coffee - Vanilla',
@@ -20,7 +20,7 @@ const coffeeSeed = [
     kickCal: 130
   },
   {
-    product_picture: '%PUBLIC_URL%/images/IceCoffeeCarmel.png',
+    product_picture: '/images/IceCoffeeCarmel.png',
     product_category: 'Coffee',
     product_type: 'Cold',
     product_name: 'Iced Coffee - Caramel',
@@ -33,7 +33,7 @@ const coffeeSeed = [
 
   },
   {
-    product_picture: '%PUBLIC_URL%/images/ColdBrew.jpg',
+    product_picture: '/images/ColdBrew.jpg',
     product_category: 'Coffee',
     product_type: 'Cold',
     product_name: 'Cold Brew',
@@ -45,7 +45,7 @@ const coffeeSeed = [
     kickCal: 5
   },
   {
-    product_picture: '%PUBLIC_URL%/images/VanillaColdBrew.jpg',
+    product_picture: '/images/VanillaColdBrew.jpg',
     product_category: 'Coffee',
     product_type: 'Cold',
     product_name: 'Vanilla Cream Cold Brew',
@@ -57,7 +57,7 @@ const coffeeSeed = [
     kickCal: 200
   },
   {
-    product_picture: '%PUBLIC_URL%/images/IcedCaramelMac.jpg',
+    product_picture: '/images/IcedCaramelMac.jpg',
     product_category: 'Coffee',
     product_type: 'Cold',
     product_name: 'Iced Caramel Macchiato',
@@ -69,7 +69,7 @@ const coffeeSeed = [
     kickCal: 350
   },
   {
-    product_picture: '%PUBLIC_URL%/images/SwiftBrewDoubleshot.jpg',
+    product_picture: '/images/SwiftBrewDoubleshot.jpg',
     product_category: 'Coffee',
     product_type: 'Cold',
     product_name: 'Swift Brew Doubleshot',
@@ -81,7 +81,7 @@ const coffeeSeed = [
     kickCal: 170
   },
   {
-    product_picture: '%PUBLIC_URL%/images/SwiftBlonde.jpg',
+    product_picture: '/images/SwiftBlonde.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Swift Brewed - Blonde',
@@ -93,7 +93,7 @@ const coffeeSeed = [
     kickCal: 5
   },
   {
-    product_picture: '%PUBLIC_URL%/images/SwiftMedium.jpg',
+    product_picture: '/images/SwiftMedium.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Swift Brewed - Medium',
@@ -105,7 +105,7 @@ const coffeeSeed = [
     kickCal: 5
   },
   {
-    product_picture: '%PUBLIC_URL%/images/SwiftDark.jpg',
+    product_picture: '/images/SwiftDark.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Swift Brewed - Dark',
@@ -117,7 +117,7 @@ const coffeeSeed = [
     kickCal: 5
   },
   {
-    product_picture: '%PUBLIC_URL%/images/FlatWhite.jpg',
+    product_picture: '/images/FlatWhite.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Flat White',
@@ -129,7 +129,7 @@ const coffeeSeed = [
     kickCal: 290
   },
   {
-    product_picture: '%PUBLIC_URL%/images/CaffeLatte.jpg',
+    product_picture: '/images/CaffeLatte.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Caffe Latte',
@@ -141,7 +141,7 @@ const coffeeSeed = [
     kickCal: 240
   },
   {
-    product_picture: '%PUBLIC_URL%/images/Cappuccino.jpg',
+    product_picture: '/images/Cappuccino.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Cappuccino',
@@ -153,7 +153,7 @@ const coffeeSeed = [
     kickCal: 150
   },
   {
-    product_picture: '%PUBLIC_URL%/images/CaffeAmericano.jpg',
+    product_picture: '/images/CaffeAmericano.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Caffe Americano',
@@ -165,7 +165,7 @@ const coffeeSeed = [
     kickCal: 25
   },
   {
-    product_picture: '%PUBLIC_URL%/images/CaffeMocha.jpg',
+    product_picture: '/images/CaffeMocha.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'Caffe Mocha',
@@ -177,7 +177,7 @@ const coffeeSeed = [
     kickCal: 450
   },
   {
-    product_picture: '%PUBLIC_URL%/images/WhiteChocoMocha.jpg',
+    product_picture: '/images/WhiteChocoMocha.jpg',
     product_category: 'Coffee',
     product_type: 'Hot',
     product_name: 'White Chocolate Mocha',

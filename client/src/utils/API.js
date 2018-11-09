@@ -12,8 +12,8 @@ export default {
   },
   // Deletes the coffee with the given id
   // not using
-  deleteCoffee: function(id) {
-    return axios.delete("/api/coffee/" + id);
+  removeFromCart: function(id) {
+    return axios.delete("/api/cart/" + id);
   },
   // Saves a coffee to the database
   // not using
