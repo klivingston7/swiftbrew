@@ -26,5 +26,8 @@ export default {
   },
   getCart: function() {
     return axios.get("/api/cart")
+  },
+  removeAll: function() {
+    return axios.delete("/api/cart")
   }
 };

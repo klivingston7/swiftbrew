@@ -82,12 +82,12 @@ class itemCard extends Component {
           </tr>
           <tr>
             <td>
-              ${this.props.social} <small>({this.props.socialCal})</small></td>
+              ${this.props.social.toFixed(2)} <small>({this.props.socialCal})</small></td>
             <td>
-              ${this.props.daily} <small>({this.props.dailyCal})</small>
+              ${this.props.daily.toFixed(2)} <small>({this.props.dailyCal})</small>
             </td>
             <td>
-              ${this.props.kick} <small>({this.props.kickCal})</small>
+              ${this.props.kick.toFixed(2)} <small>({this.props.kickCal})</small>
             </td>
           </tr>
           </tbody>

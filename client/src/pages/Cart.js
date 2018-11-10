@@ -13,10 +13,12 @@ class Cart extends Component {
     this.state = {
       cart: [],
       checkoutClicked: false,
-      qrUrl:''
+      qrUrl:'',
+      orderName: ''
     }
 
     this.renderQR = this.renderQR.bind(this);
+    this.getOrderName = this.getOrderName.bind(this);
   }
 
   componentDidMount() {
@@ -42,6 +44,14 @@ class Cart extends Component {
       .catch(err => console.log(err));
   };
 
+  getOrderName = (e) => {
+    e.preventDefault();
+
+    console.log("something is happening")
+    this.setState({orderName: e.target.value}, console.log(this.state.orderName))
+
+  }
+
   renderQR = (e) => {
     e.preventDefault();
     
@@ -57,6 +67,7 @@ class Cart extends Component {
 
     const that = this;
 
+    //this still doesn't work there's some issues with async
     QRCode.toDataURL(qrURL, opts, function (err, url) {
       if (err) throw err
 
@@ -67,11 +78,6 @@ class Cart extends Component {
         
       },console.log(that.state));
     })
-
-    // this.setState({
-    //   checkoutClicked: true,
-    //   qrURL: url
-    // }, console.log(this.state))
 
   }
 
@@ -100,7 +106,7 @@ class Cart extends Component {
                           <tr key = {cart._id}>
                               <td>{cart.product_name}</td>
                               <td>{cart.size}</td>
-                              <td>{cart.price}</td>
+                              <td>${cart.price.toFixed(2)}</td>
                               <td><Button id = {cart._id} onClick = {this.removeFromCart}>X</Button></td>
                           </tr>
                         ))}
@@ -116,7 +122,7 @@ class Cart extends Component {
                   <Label for="orderName">Save your order for easy checkout next time!</Label>
                   <br/>
                   <br/>
-                  <Input type = "text" name="orderName" id="orderName" placeholder="Enter an order name (optional)"></Input>
+                  <Input type = "text" name="orderName" id="orderName" placeholder="Enter an order name (optional)" onBlur = {this.getOrderName}></Input>
                 </Form>
               </Col>
           </Row>

@@ -3,13 +3,27 @@ import API from '../utils/API';
 import Header from "../components/Header";
 import QRScanner from "../components/QRScanner";
 
-import {Container, Row, Col, Card, CardBody, CardTitle, Table } from 'reactstrap';
+import {Container, Row, Col, Card, CardBody, CardTitle, Table, Button } from 'reactstrap';
 
 class Checkout extends Component {
 
-  state = {
-    cart: []
-  };
+  constructor(props){
+    super(props)
+
+    this.state = {
+      cart: [],
+      total: 0,
+      payOption: "none"
+    };
+
+    this.calculateTotal = this.calculateTotal.bind(this);
+    this.changeSwitch = this.changeSwitch.bind(this);
+    this.renderSwitch = this.renderSwitch.bind(this);
+    this.emptyCart = this.emptyCart.bind(this)
+    
+
+  }
+  
 
   componentDidMount() {
     this.loadCart()
@@ -21,54 +35,112 @@ class Checkout extends Component {
       .then(res => {
         this.setState({
           cart: res.data})
-       }
-      )
+        this.calculateTotal()
+        
+       })
+       
       .catch(err => console.log(err));
   };
 
-  calculateTotal = (e) => {
+  calculateTotal = () => {
+    let sum = 0;
+
+    this.state.cart.forEach( item => {
+      sum += item.price;})
+
+    this.setState({ total: sum.toFixed(2)})
+  };
+
+  changeSwitch(e){
     e.preventDefault();
 
-    API.removeFromCart(e.target.id)
-      .then(this.loadCart)
+    this.setState({payOption: e.target.value})
+  }
+
+  emptyCart(e){
+    e.preventDefault();
+    
+    API.removeAll()
+      .then(res => {
+        this.setState({cart:res.data},this.calculateTotal())
+        })
       .catch(err => console.log(err));
-  };
+  }
+
+  renderSwitch(){
+    switch(this.state.payOption){
+      case 'cash':
+        return(<div>
+          {/* this done button should be a print receipt option */}
+          <Button onClick = {this.emptyCart}>Done</Button>
+          <Button onClick = {this.changeSwitch} value = "none">Cancel</Button>
+        </div>)
+        break;
+      case 'card':
+        return(<div>
+          <div>Coming soon!</div>
+          <Button onClick = {this.changeSwitch} value = "none">Cancel</Button>
+        </div>)
+        break;
+      case 'none':
+        return(<div></div>)
+        break;
+      default:
+        return(<p>Error</p>)
+        break;
+    }
+  }
 
   render(){
     return(
-      <Container>
-      <Header />
-        <Row>
-          <Col md = "6">
-            <QRScanner />
-          </Col>
-          <Col sm="6">
-            <Card>
-              <CardBody>
-                  <CardTitle>Total: $1,000,000</CardTitle>
-                  <Table>
-                    <thead>
-                      <tr>
-                          <th>Product</th>
-                          <th>Category</th>
-                          <th>Cost</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    {this.state.cart.map(cart =>(
-                      <tr key = {cart._id}>
-                          <td>{cart.product_name}</td>
-                          <td>{cart.size}</td>
-                          <td>{cart.price}</td>
-                      </tr>
-                    ))}
-                    </tbody>
-                  </Table>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Header />
+        <Container>
+        
+          <Row>
+            <Col md = "6">
+              <QRScanner />
+              <Row>
+                <Col md = "6" className = "text-center">
+                  <Button onClick = {this.changeSwitch} value = {"cash"}>Pay with Cash</Button>
+                </Col>
+                <Col md = "6" className = "text-center">
+                 <Button onClick = {this.changeSwitch} value = {"card"}>Pay with Card</Button>
+                </Col>
+              </Row>
+              <Row>
+                {this.renderSwitch()}
+              </Row>
+            </Col>
+            <Col sm="6">
+              <Card>
+                <CardBody>
+                    <CardTitle>Total: ${this.state.total}</CardTitle>
+                    <Table>
+                      <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Cost</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {this.state.cart.length ?
+                          this.state.cart.map(cart =>(
+                          <tr key = {cart._id}>
+                              <td>{cart.product_name}</td>
+                              <td>{cart.size}</td>
+                              <td>${cart.price.toFixed(2)}</td>
+                          </tr>
+                        )) : <tr></tr>}
+                      </tbody>
+                    </Table>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     )
   }
 };
