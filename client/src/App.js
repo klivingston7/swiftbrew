@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import SavedOrders from "./pages/SavedOrders";
 
 const App = () => (
   <Router>
@@ -30,6 +31,7 @@ const App = () => (
         <Route path="/menu" component={Menu} />
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={Checkout} />
+        <Route path="/orders" component={SavedOrders} />
       </Switch>
     </div>
   </Router>
