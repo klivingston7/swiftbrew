@@ -26,6 +26,6 @@ export default {
     return axios.post("/api/orders",orderData);
   },
   removeOrder: function(id) {
-    return axios.delete("/api/orders" + id)
+    return axios.delete("/api/orders/" + id)
   }
 };

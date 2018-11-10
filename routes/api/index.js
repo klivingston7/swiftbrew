@@ -8,6 +8,6 @@ router.use("/coffee",coffeeRoutes,cartRoutes);
 
 router.use("/cart",cartRoutes,ordersRoutes);
 
-router.use("/orders",ordersRoutes);
+router.use("/orders",ordersRoutes,cartRoutes);
 
 module.exports = router;

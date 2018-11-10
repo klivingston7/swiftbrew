@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "./QRScanner.css"
 import { qrcode } from '../../qr_packed'
 
-console.log(qrcode)
 //https://www.sitepoint.com/create-qr-code-reader-mobile-website/
 
 class QRScanner extends Component {
@@ -16,6 +15,7 @@ class QRScanner extends Component {
     this.openQRCamera = this.openQRCamera.bind(this)
   }
 
+  //this does not work
   openQRCamera(node) {
     console.log("firing")
     var reader = new FileReader();
@@ -31,8 +31,6 @@ class QRScanner extends Component {
       qrcode.decode(reader.result);
     };
     reader.readAsDataURL(node.files[0]);
-
-    console.log("To be fixed")
   }
 
 
@@ -40,14 +38,14 @@ class QRScanner extends Component {
   render(){
     return(
       <div>
-        <input type="text" id="qrcode-text"
-        /><label id="qrcode-text-btn">
+        {/* <input type="text" id="qrcode-text"
+        /><label id="qrcode-text-btn"> */}
             <input type="file"
               accept="image/*"
               capture="environment"
               onChange={this.openQRCamera}
               tabIndex = {-1} />
-        </label>
+        {/* </label> */}
       </div>
     )
   }

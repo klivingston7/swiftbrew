@@ -3,7 +3,7 @@ import API from '../utils/API';
 import Header from "../components/Header";
 import SavedCard from "../components/SavedCard";
 
-import {Container, Row, Col, Card } from 'reactstrap';
+import {Container, Row, Col } from 'reactstrap';
 
 class Cart extends Component {
 

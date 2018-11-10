@@ -43,14 +43,11 @@ class itemCard extends Component {
       size: this.state.size,
       price: this.state.price
     },function(){
-      console.log("this happened")
-      console.log(this.state)
       API.addCoffeeToCart({
         product_name: this.state.name,
         size: this.state.size,
         price: this.state.price
       })
-      .then(console.log("posted"))
       .catch(err => console.log(err));
     });
   
