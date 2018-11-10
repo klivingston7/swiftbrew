@@ -120,7 +120,7 @@ class Checkout extends Component {
                       <thead>
                         <tr>
                             <th>Product</th>
-                            <th>Category</th>
+                            <th>Size</th>
                             <th>Cost</th>
                         </tr>
                       </thead>

@@ -22,8 +22,8 @@ export default {
   getOrders: function() {
     return axios.get("/api/orders");
   },
-  saveOrder: function(id) {
-    return axios.post("/api/orders" + id);
+  saveOrder: function(orderData) {
+    return axios.post("/api/orders",orderData);
   },
   removeOrder: function(id) {
     return axios.delete("/api/orders" + id)

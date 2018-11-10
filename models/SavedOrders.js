@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ordersSchema = new Schema({
-  order_name: {type: String, require: true},
+  order_name: {type: String, require: true, default:"SwiftSave"},
   product_name1: { type: String, required: true },
   size1: {type: String, required: true},
   price1: {type: Number, required: true},

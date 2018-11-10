@@ -4,8 +4,8 @@
   width: 1em;
   background: url(qr_icon.svg) 50% 50% no-repeat;
   cursor: pointer;
-  margin-top:-1.4em;
-  margin-left: 1em;
+  /* margin-top:-1.4em;
+  margin-left: 1em; */
 }
 
 #qrcode-text-btn > input[type=file] {
@@ -15,7 +15,8 @@
   opacity: 0;
 }
 
-/* #qrcode-text {
+
+#qrcode-text {
   padding-right: 1.7em;
   margin-right: 0;
   vertical-align: middle;
@@ -25,4 +26,4 @@
   width: 1.7em;
   margin-left: -1.7em;
   vertical-align: middle;
-} */
+}

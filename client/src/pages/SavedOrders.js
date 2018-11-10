@@ -53,7 +53,7 @@ class Cart extends Component {
           <Row>
             {this.state.orders.map( orders => 
               (<Col sm = "6" key = {orders._id}>
-                <SavedCard />
+                <SavedCard {...orders}/>
               </Col>))}
           </Row>
           
