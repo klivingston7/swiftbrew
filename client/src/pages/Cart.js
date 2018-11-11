@@ -68,17 +68,18 @@ class Cart extends Component {
       });
     });
 
-    let items = this.state.cart.map(items => ({product_name:items.product_name, size:items.size, price:items.price}))
+    if(this.state.orderName !== ''){
+      let items = this.state.cart.map(items => ({product_name:items.product_name, size:items.size, price:items.price}))
 
-    //this is really not DRY i'm sorry
-    let orderData = {
-      order_name: this.state.orderName,
-      items: items
-    };
+      let orderData = {
+        order_name: this.state.orderName,
+        items: items
+      };
 
-    API.saveOrder(orderData)
-      .catch(err => console.log(err));
+      API.saveOrder(orderData)
+        .catch(err => console.log(err));
 
+    }
   }
 
   render(){
