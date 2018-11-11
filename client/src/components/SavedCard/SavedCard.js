@@ -25,7 +25,7 @@ class SavedCard extends Component {
   addToCart = (e) => {
     e.preventDefault();
 
-    this.props.items.map( item => {
+    this.props.items.forEach( item => {
       API.addCoffeeToCart(item)
       .catch(err => console.log(err));
     })

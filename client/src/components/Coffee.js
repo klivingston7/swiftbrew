@@ -4,14 +4,11 @@ import {Container, Row, Col} from 'reactstrap';
 import ItemCard from '../components/ItemCard';
 
 class Coffee extends Component {
-  constructor(props){
-    super(props)
 
-    this.state = {
-      coffee: [],
-    };
+  state = {
+    coffee: [],
+  };
 
-  }
 
   componentDidMount() {
     this.loadCoffee();

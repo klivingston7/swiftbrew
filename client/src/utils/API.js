@@ -5,7 +5,16 @@ export default {
   getCoffee: function() {
     return axios.get("/api/coffee");
   },
-  // Deletes the coffee with the given id
+  getBakery:function(){
+    return axios.get("/api/bakery");
+  },
+  getFrappucino:function(){
+    return axios.get("/api/frappucino")
+  },
+  getTea:function(){
+    return axios.get("/api/tea")
+  },
+  // Deletes the item with the given id
   removeFromCart: function(id) {
     return axios.delete("/api/cart/" + id);
   },

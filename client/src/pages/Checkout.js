@@ -3,7 +3,7 @@ import API from '../utils/API';
 import Header from "../components/Header";
 import QRScanner from "../components/QRScanner";
 
-import {Container, Row, Col, Card, CardBody, CardTitle, Table, Button } from 'reactstrap';
+import {Container, Row, Col, Card, CardBody, CardTitle, Table, Button, Input } from 'reactstrap';
 
 class Checkout extends Component {
 
@@ -13,6 +13,7 @@ class Checkout extends Component {
     this.state = {
       cart: [],
       total: 0,
+      change: -1,
       payOption: "none"
     };
 
@@ -20,6 +21,7 @@ class Checkout extends Component {
     this.changeSwitch = this.changeSwitch.bind(this);
     this.renderSwitch = this.renderSwitch.bind(this);
     this.emptyCart = this.emptyCart.bind(this)
+    this.calculateChange = this.calculateChange.bind(this)
     
 
   }
@@ -57,6 +59,14 @@ class Checkout extends Component {
     this.setState({payOption: e.target.value})
   }
 
+  calculateChange(e){
+    e.preventDefault();
+
+    let change = e.target.value - this.state.total;
+
+    this.setState({change:change})
+  }
+
   emptyCart(e){
     e.preventDefault();
     
@@ -67,13 +77,24 @@ class Checkout extends Component {
       .catch(err => console.log(err));
   }
 
+
+
   renderSwitch(){
     switch(this.state.payOption){
       case 'cash':
         return(<div>
+          <Row>
+            <Input type = "number" name="calculateChange" id="calculateChange" 
+              placeholder="Enter Amount" onBlur = {this.calculateChange}></Input>
+          </Row>
+          <Row>
+          { this.state.change !== -1 ? <p>Change due: ${this.state.change.toFixed(2)}</p> : <p></p>}
+          </Row>
           {/* this done button should be a print receipt option */}
-          <Button onClick = {this.emptyCart}>Done</Button>
-          <Button onClick = {this.changeSwitch} value = "none">Cancel</Button>
+          <Row>
+            <Button onClick = {this.emptyCart}>Done</Button>
+            <Button onClick = {this.changeSwitch} value = "none">Cancel</Button>
+          </Row>
         </div>)
         break;
       case 'card':
