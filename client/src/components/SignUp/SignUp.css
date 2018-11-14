@@ -1,0 +1,280 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #c1bdba;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.mainImg {
+  max-width: 700px;
+  max-height: 450px;
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #3b5e69;
+  transition: 0.5s ease;
+}
+a:hover {
+  color: #628895;
+}
+
+.form {
+  background: transparent;
+  padding: 40px;
+  max-width: 600px;
+  margin: 20px auto 50px auto;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px 3px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: #62889549;
+  color: #628895;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.tab-group li a:hover {
+  background: #628895;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #3b5e69;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #3b5e69;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0 0 40px;
+}
+
+label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: #3b5e69;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+}
+
+label.active {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  left: 2px;
+  font-size: 12px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #3b5e69;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 2px solid #3b5e69;
+  color: #3b5e69;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #2f4b53;
+}
+
+textarea {
+  border: 2px solid #3b5e69;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #3b5e69;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #628895;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.OR {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #3b5e69;
+}
+
+.signIn-btn {
+  padding: 14px 30px;
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: 3px;
+}
+/* Main Sign In Button */
+.signIn-MAIN {
+  border: 2.5px solid #3b5e69;
+  background-color: #3b5e69;
+  text-decoration: none !important;
+  color: #FFFF !important;
+}
+.signIn-MAIN:hover {
+  background-color:transparent !important;
+  color: #3b5e69 !important;
+}
+/* Facebook Button */
+#signIn-FB {
+  border: 2.5px solid #3a5997;
+  text-decoration: none;
+  background-color: #3a5997;
+  color: #FFF;
+}
+#signIn-FB:hover {
+  background-color: transparent !important;
+  color: #3a5997;
+}
+/* Twitter Button */
+#signIn-TW {
+  border: 2.5px solid #55ADEE;
+  text-decoration: none;
+  background-color: #55ADEE;
+  color: #FFF;
+}
+#signIn-TW:hover {
+  background-color: transparent !important;
+  color: #55ADEE;
+}
+/* Google Button */
+#signIn-GM {
+  border: 2.5px solid #EA4B41;
+  text-decoration: none;
+  background-color: #EA4B41;
+  color: #FFF;
+}
+#signIn-GM:hover {
+  background-color: transparent !important;
+  color: #EA4B41;
+}
+/* Yahoo Button */
+#signIn-IG {
+  border: 2.5px solid #2D5F86;
+  text-decoration: none;
+  background-color: #2D5F86;
+  color:  #FFF;
+}
+#signIn-IG:hover {
+  background-color: transparent !important;
+  color: #2D5F86
+}
+
+
+@media screen and (max-width: 600px) {
+.mainImg {
+  max-width: 370px;
+  margin-top: 15px;
+}
+.form{
+  margin: 20px auto;
+}
+/* Facebook Button */
+#signIn-FB {
+  margin: 0 15px 15px 15px;
+}
+/* Twitter Button */
+#signIn-TW {
+  margin: 0 15px 15px 15px;
+}
+/* Google Button */
+#signIn-GM {
+  margin: 0 15px;
+}
+/* Yahoo Button */
+#signIn-IG {
+  margin: 0 15px;
+}
+
+}
