@@ -4,7 +4,7 @@ import SignUp from "../components/SignUp/SignUp";
 import SignIn from "../components/SignIn/SignIn";
 
 const MainTabs = (props) => (
-  <div>
+  <div className="Log">
     <ul className="maintab-group">
       <li className="maintab">
         <Link

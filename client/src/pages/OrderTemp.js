@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import Main from "../components/Main";
 import Header from "../components/Header";
+import Order from "../components/Order";
 
-
-class Home extends Component {
+class OrderTemp extends Component {
   render() {
     return (
-      <div className="Home">
+      <div className="Order">
         <Header />
 
-        <Main />
-
+        <Order />
       </div>
     );
   }
 }
 
-export default Home;
+export default OrderTemp;
