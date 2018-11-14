@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+/* .main {
+    padding-top: 50px;
+    background: #ECEFF1;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+  } */
+>>>>>>> 3ea9d3950461d894187238116a7df5f9cb5caa0b
   body {
     background: none;
     font-family: "Titillium Web", sans-serif;

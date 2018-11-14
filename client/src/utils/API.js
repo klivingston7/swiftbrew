@@ -5,16 +5,36 @@ export default {
   getCoffee: function() {
     return axios.get("/api/coffee");
   },
-  // Gets the coffee with the given id
-  getOneCoffee: function(id) {
-    return axios.get("/api/coffee/" + id);
+  getBakery:function(){
+    return axios.get("/api/bakery");
   },
-  // Deletes the coffee with the given id
-  deleteCoffee: function(id) {
-    return axios.delete("/api/coffee/" + id);
+  getFrappucino:function(){
+    return axios.get("/api/frappucino")
   },
-  // Saves a coffee to the database
-  saveCoffee: function(bookData) {
-    return axios.post("/api/coffee", bookData);
+  getTea:function(){
+    return axios.get("/api/tea")
+  },
+  // Deletes the item with the given id
+  removeFromCart: function(id) {
+    return axios.delete("/api/cart/" + id);
+  },
+  //sends item to cart
+  addCoffeeToCart: function(cartData) {
+    return axios.post("/api/cart", cartData);
+  },
+  getCart: function() {
+    return axios.get("/api/cart");
+  },
+  removeAll: function() {
+    return axios.delete("/api/cart");
+  },
+  getOrders: function() {
+    return axios.get("/api/orders");
+  },
+  saveOrder: function(orderData) {
+    return axios.post("/api/orders",orderData);
+  },
+  removeOrder: function(id) {
+    return axios.delete("/api/orders/" + id)
   }
 };

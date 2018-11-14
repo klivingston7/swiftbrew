@@ -109,10 +109,6 @@ label.highlight {
   color: #3b5e69;
 }
 
-#fname, #email, #message {
-  padding: 0;
-}
-
 input,
 textarea {
   display: block;

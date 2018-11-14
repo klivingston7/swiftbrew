@@ -8,7 +8,7 @@ import Bakery from "../components/Bakery";
 
 
 const Menu = (props) => (
-  <div className="Menu">
+  <div>
     <Header />
     <div className="container">
       <ul className="tab-group">
