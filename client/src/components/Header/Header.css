@@ -1,0 +1,60 @@
+h5 {
+  letter-spacing: 3px;
+  font-size: 1.75rem !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.headLink{
+  text-decoration: none !important;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+.headLink:hover{
+  color: #5f5e5e;
+}
+#contact{
+  text-decoration: none !important;
+  color: #355761;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+#contact:hover{
+  color: #628895;
+}
+.cartImg {
+  max-height: 35px;
+}
+.cartImg:hover {
+  transform: scale(1.1);
+}
+.cart{
+  text-decoration: none !important;
+  color: #3e6875;
+  font-weight: 500;
+}
+.cart:hover {
+  color: #628895;
+}
+
+.product-title {
+  font-size: 1.55rem !important;
+}
+.tile-title {
+  font-size: .9rem !important;
+  font-weight: 200 !important;
+}
+
+#productPic {
+  float: right !important;
+  width: 125px;
+  margin-top: -50px;
+  margin-bottom: 15px;
+  
+}
+
+.headerImg {
+  max-height: 40px;
+  padding-right: 15px;
+}
