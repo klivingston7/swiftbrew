@@ -12,7 +12,8 @@ const Contact = props => (
             <hr />
             <div className="container">
                 <div className="row">
-                    <form className="col-sm-12" action="action_page.php">
+
+                    <form className="col-sm-12" action="https://formspree.io/shelbydix1@gmail.com" method="POST">
                         <div className="form-group">
                             <label className="control-label col-sm-2" id="fname" for="fname">Name</label>
                             <div className="form-text">
@@ -34,9 +35,11 @@ const Contact = props => (
                         <div className="form-group">
                             <div className="col-sm-offset-2">
                                 <input className="btn car-Btn" type="submit" value="Submit" />
+                                <input type="hidden" name="_next" value="https://swiftbrew.herokuapp.com/home" />
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
             <br />
