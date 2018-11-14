@@ -55,7 +55,7 @@ class Cart extends Component {
       }
     }
 
-    const qrURL = "https://localhost:3000/checkout";
+    const qrURL = "https://swiftbrew.herokuapp.com/checkout";
 
     const that = this;
 

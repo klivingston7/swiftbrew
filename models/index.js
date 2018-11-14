@@ -4,5 +4,6 @@ module.exports = {
   SavedOrders: require("./SavedOrders"),
   Bakery: require("./Bakery"),
   Frappucino: require("./Frappucino"),
-  Tea: require("./Tea")
+  Tea: require("./Tea"),
+  Users: require("./Users")
 };

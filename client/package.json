@@ -8,12 +8,8 @@
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14",
     "react-router-dom": "^4.1.2",
-<<<<<<< HEAD
     "axios": "^0.16.2",
     "react-bootstrap": "^0.32.4"
-=======
-    "axios": "^0.16.2"
->>>>>>> 3ea9d3950461d894187238116a7df5f9cb5caa0b
   },
   "scripts": {
     "start": "react-scripts start",

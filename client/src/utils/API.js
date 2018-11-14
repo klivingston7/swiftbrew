@@ -1,6 +1,18 @@
 import axios from "axios";
 
 export default {
+  facebook:function(){
+    return axios.get("/facebook");
+  },
+  twitter:function(){
+    return axios.get("/twitter");
+  },
+  google:function(){
+    return axios.get("/google");
+  },
+  login: function(user){
+    return axios.post("/login", user);
+  },
   // Gets all coffee
   getCoffee: function() {
     return axios.get("/api/coffee");
