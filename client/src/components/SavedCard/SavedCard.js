@@ -73,7 +73,7 @@ class SavedCard extends Component {
     return(
       <Card>
         <CardBody>
-          <CardTitle onClick = {this.toggleDetails}>{this.props.order_name}</CardTitle>
+          <CardTitle className={"orderName"} onClick = {this.toggleDetails}>{this.props.order_name}</CardTitle>
           {!this.state.showDetails ? <div></div> : this.renderDetails()}
         </CardBody>
       </Card>
