@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API"
-import {Container, Row, Col} from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import BakeryCard from '../components/BakeryCard';
 
 class Bakery extends Component {
@@ -13,30 +13,35 @@ class Bakery extends Component {
   }
 
   loadBakery = () => {
-    
+
     API.getBakery()
       .then(res => {
-        this.setState({bakery: res.data})
-       }
+        this.setState({ bakery: res.data })
+      }
       )
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <div>
-        <Container>
-          <header className="">
-           <h1>Bakery</h1>
-          </header>
-          <hr />
-          <Row>
-              {this.state.bakery.map(bakedGood => (
-                <Col sm = "6" key = {bakedGood._id}><BakeryCard {...bakedGood}></BakeryCard></Col>
-              ))}
-          </Row>
-        </Container>
+
+      <div className="container-fluid">
+        <header>
+          <h1 className="menuH">Bakery</h1>
+        </header>
+        <br />
+        <p className="menuP" style={{ textAlign: "center" }}>
+        Choose from baked goods that are thoughtfully crafted with high-quality ingredients and the
+        oh-so-good taste you’re craving.
+        </p>
+        <hr />
+        <Row>
+          {this.state.bakery.map(bakedGood => (
+            <Col sm="6" key={bakedGood._id}><BakeryCard {...bakedGood}></BakeryCard></Col>
+          ))}
+        </Row>
       </div>
+
     );
   }
 }

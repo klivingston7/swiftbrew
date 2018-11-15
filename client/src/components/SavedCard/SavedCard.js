@@ -62,8 +62,8 @@ class SavedCard extends Component {
               )}
             </tbody>
             </Table>
-            <Button onClick = {this.addToCart}>Add to Cart</Button>
-            <Button id = {this.props._id} onClick = {this.deleteSave}>Delete</Button>
+            <Button className={"ordBTN pad"} onClick = {this.addToCart}>Add to Cart</Button>
+            <Button className={"ordBTN"} id = {this.props._id} onClick = {this.deleteSave}>Delete</Button>
         </div>
       )
   }

@@ -1,3 +1,43 @@
 .Contact .container {
     padding: 10px;
 }
+
+.NEM {
+    padding: 15px 0 !important;
+    margin: 10px 0 !important;
+}
+
+label#fname, label#email, label#message {
+    position: absolute;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+    left: 2 !important;
+    color: #3b5e69;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+textarea#message{
+    font-size: 1.5rem !important;
+}
+
+.con-Btn {
+    padding: 18px, 30px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 2px solid #628895;
+    text-decoration: none;
+    background-color: #628895;
+    color: #FFF;
+    margin-top: 12px;
+    }
+    .con-Btn:hover {
+    border: 2px solid #3e6875;
+    background-color: transparent;
+    color: #3e6875;
+    }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
 import { Card, CardBody, CardTitle, Table, Button} from 'reactstrap';
+import "./Card.css";
 
 import DropDown from './DropDown';
 
@@ -59,7 +60,7 @@ class itemCard extends Component {
   
     <Card>
       <CardBody>
-        <h2>{this.props.product_name}</h2>
+        <h2 className="cardH">{this.props.product_name}</h2>
         <img id="productPic" src={this.props.product_picture} alt = ""/>
 
         <CardTitle> {this.props.product_type} {this.props.product_category}</CardTitle>

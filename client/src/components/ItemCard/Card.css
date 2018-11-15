@@ -1,0 +1,90 @@
+.card {
+    margin-bottom: 15px;
+}
+
+h1.menuH {
+    font-size: 3.4rem;
+}
+
+p.menuP p.QR {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    width: 80%;
+    margin: auto;
+}
+
+h2.cardH {
+    font-size: 2rem !important;
+}
+
+.card-title{
+    font-size: 1.4rem !important;
+}
+
+.col-Btn {
+    padding: 18px, 30px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 2px solid #3e6875 !important;
+    text-decoration: none;
+    color: #3e6875 !important;
+    background-color: transparent !important;
+    margin: 0px;
+    }
+    .col-Btn:hover {
+    border: 2px solid #628895 !important;
+    background-color: #628895 !important;
+    color: #FFF !important;
+    }
+
+.dropdown-toggle.btn {
+    padding: 6px 12px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem !important;
+    letter-spacing: 3px;
+    border: 2px solid #3e6875 !important;
+    text-decoration: none;
+    color: #3e6875 !important;
+    background-color: transparent !important;
+    margin-right: 10px;
+    }
+    .dropdown-toggle.btn:hover {
+    border: 2px solid #628895 !important;
+    background-color: #628895 !important;
+    color: #FFF !important;
+    }
+
+
+#saveLabel {
+    position: absolute;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    left: auto !important;
+    color: #3b5e69;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.removeBtn {
+    padding: 6px 12px !important;
+    font-weight: 500;
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    border: 2px solid #3e6875 !important;
+    color: #3e6875 !important;
+    background-color: transparent !important;
+    margin-right: 10px;
+}
+.removeBtn:hover {
+    border: 2px solid #628895 !important;
+    background-color: #628895 !important;
+    color: #FFF !important;
+}
+

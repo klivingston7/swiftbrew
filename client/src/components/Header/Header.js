@@ -10,7 +10,7 @@ const Header = props => (
         <a className="p-2 headLink" href="/menu/coffee">Menu</a>
         {/* <a className="p-2 headLink" href="#">Favorites</a> */}
         <a className="p-2 headLink" href="/orders">Orders</a>
-        <a className="p-2" id="contact" href="/about">About</a>
+        {/* <a className="p-2" id="contact" href="/about">About</a> */}
         <a className="p-2" id="contact" href="/contact">Contact</a>
         <a className="cart" href="/cart">
           <img className="cartImg" src="/media/SBCUP.png" alt=""/> 
