@@ -31,8 +31,8 @@ class Bakery extends Component {
         </header>
         <br />
         <p className="menuP" style={{ textAlign: "center" }}>
-        Choose from baked goods that are thoughtfully crafted with high-quality ingredients and the
-        oh-so-good taste you’re craving.
+          Choose from baked goods that are thoughtfully crafted with high-quality ingredients and the
+          oh-so-good taste you crave.
         </p>
         <hr />
         <Row>

@@ -34,8 +34,8 @@ class Tea extends Component {
         </header>
         <br />
         <p className="menuP" style={{ textAlign: "center" }}>
-        Eveything from tea lattes to iced teas to perfectly brewed cups, discover the breadth of
-        handcrafted teas we offer.
+          Eveything from tea lattes to iced teas to perfectly brewed cups. Discover the breadth of
+          handcrafted teas we offer.
         </p>
         <hr />
         <Row>
