@@ -40,6 +40,11 @@ td {
     margin-right: 10px;
 }
 
+.orderName {
+    text-align: center !important;
+    vertical-align: middle!important;
+}
+
 @media (min-width: 1200px){
 
     .container {
