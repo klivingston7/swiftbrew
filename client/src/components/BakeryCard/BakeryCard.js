@@ -37,7 +37,7 @@ class BakeryCard extends Component {
   
     <Card>
       <CardBody>
-        <h2>{this.props.product_name}</h2>
+        <h2 className="cardH">{this.props.product_name}</h2>
         <img id="productPic" src={this.props.product_picture} alt = ""/>
 
         <CardTitle> {this.props.product_type} {this.props.product_category}</CardTitle>

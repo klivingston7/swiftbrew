@@ -31,8 +31,10 @@ const MainTabs = (props) => (
     </ul>
 
     <div className="maintab-content" />
-          {props.type === "signin" ? <SignIn /> : <SignUp />}
+    {props.type === "signin" ? <SignIn /> : <SignUp />}
+
   </div>
+
 );
 
 export default MainTabs;

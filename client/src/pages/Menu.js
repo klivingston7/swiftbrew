@@ -10,7 +10,7 @@ import Bakery from "../components/Bakery";
 const Menu = (props) => (
   <div>
     <Header />
-    <div className="container">
+    <div className="container-fluid contMenu">
       <ul className="tab-group">
         <li className="tab">
           <Link
@@ -64,6 +64,7 @@ const Menu = (props) => (
 
     </div>
   </div>
+
 );
 
 export default Menu;

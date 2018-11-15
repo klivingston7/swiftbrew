@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API"
-import {Container, Row, Col} from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import ItemCard from '../components/ItemCard';
 
 class Tea extends Component {
@@ -15,11 +15,11 @@ class Tea extends Component {
   }
 
   loadTea = () => {
-    
+
     API.getTea()
       .then(res => {
-        this.setState({tea: res.data})
-       }
+        this.setState({ tea: res.data })
+      }
       )
       .catch(err => console.log(err));
   };
@@ -27,19 +27,24 @@ class Tea extends Component {
 
   render() {
     return (
-      <div>
-        <Container>
-          <header className="">
-           <h1>Tea</h1>
-          </header>
-          <hr />
-          <Row>
-              {this.state.tea.map(tea => (
-                <Col sm = "6" key = {tea._id}><ItemCard {...tea}></ItemCard></Col>
-              ))}
-          </Row>
-        </Container>
+
+      <div className="container-fluid">
+        <header>
+          <h1 className="menuH">Tea</h1>
+        </header>
+        <br />
+        <p className="menuP" style={{ textAlign: "center" }}>
+        Eveything from tea lattes to iced teas to perfectly brewed cups, discover the breadth of
+        handcrafted teas we offer.
+        </p>
+        <hr />
+        <Row>
+          {this.state.tea.map(tea => (
+            <Col sm="6" key={tea._id}><ItemCard {...tea}></ItemCard></Col>
+          ))}
+        </Row>
       </div>
+
     );
   }
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /* .main {
     padding-top: 50px;
     background: #ECEFF1;
@@ -11,11 +9,15 @@
     align-content: flex-start;
     overflow: auto;
   } */
->>>>>>> 3ea9d3950461d894187238116a7df5f9cb5caa0b
   body {
     background: none;
     font-family: "Titillium Web", sans-serif;
   }
+
+  .container.main{
+    padding-top: 40px;
+  }
+
   .carousel {
     margin-bottom: 4rem;
   }
@@ -25,7 +27,7 @@
     z-index: 10;
   }
   .carH {
-    font-size: 4.5rem !important;
+    font-size: 3.2rem !important;
   } 
   .carCap {
     font-weight: 400 !important;
@@ -46,6 +48,11 @@
   .first-slide, .second-slide, .third-slide {
     opacity: .6;
   }
+
+  .mainBTN{
+    margin: 10px 0 0 0;
+  }
+
   .car-Btn {
     padding: 18px, 30px;
     font-family: 'Open Sans', sans-serif !important;
@@ -60,10 +67,9 @@
     margin-top: 12px;
     }
     .car-Btn:hover {
-    border: 2px solid #628895;
     border: 2px solid #3e6875;
     background-color: transparent;
-    color: #3e6875;
+    color: rgba(255, 255, 255, 0.808);
     }
 
     .tab-group {
@@ -160,4 +166,8 @@
     border: 2px solid #628895;
     background-color: #628895;
     color: #FFF;
+    }
+
+    .contMenu {
+      width: 95% !important;
     }

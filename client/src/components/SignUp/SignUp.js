@@ -34,7 +34,7 @@ class SignUp extends Component {
       return (
 
       <div id="signup">
-        <h1>Sign Up for Free</h1>
+        <h1 className="logH">Sign Up for Free</h1>
 
         <form action="/signup" method="post">
           <div className="top-row">

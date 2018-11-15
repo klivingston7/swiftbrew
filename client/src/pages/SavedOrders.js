@@ -3,13 +3,13 @@ import API from '../utils/API';
 import Header from "../components/Header";
 import SavedCard from "../components/SavedCard";
 
-import {Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 class Cart extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
-  
+
     this.state = {
       orders: []
     }
@@ -21,12 +21,13 @@ class Cart extends Component {
   }
 
   loadOrders = () => {
-    
+
     API.getOrders()
       .then(res => {
         this.setState({
-          orders: res.data})
-       }
+          orders: res.data
+        })
+      }
       )
       .catch(err => console.log(err));
   };
@@ -39,24 +40,22 @@ class Cart extends Component {
       .catch(err => console.log(err));
   };
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <Header />
         <Container>
+          <div style={{ margin: "40px 0 5px 0" }}>
+            <h1 className="menuH">Saved Orders</h1>
+          </div>
+          <hr />
           <Row>
-            <header className="">
-              <h1>Saved Orders</h1>
-            </header>
-            <hr />
-          </Row>
-          <Row>
-            {this.state.orders.map( orders => 
-              (<Col sm = "6" key = {orders._id}>
-                <SavedCard {...orders}/>
+            {this.state.orders.map(orders =>
+              (<Col sm="6" key={orders._id}>
+                <SavedCard {...orders} />
               </Col>))}
           </Row>
-          
+
         </Container>
       </div>
     )

@@ -81,13 +81,19 @@ h1 {
   margin: 0 0 40px;
 }
 
+.logH {
+  margin-bottom: 1rem;
+  color: #3b5e69;
+}
+
 label {
   position: absolute;
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  left: 13px;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  left: 2px;
+  font-size: 12px;
   color: #3b5e69;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-weight: 600;
   letter-spacing: 0.1em;
   transition: all 0.25s ease;
@@ -212,6 +218,7 @@ textarea {
   text-decoration: none;
   background-color: #3a5997;
   color: #FFF;
+  margin: 10px;
 }
 .signIn-FB:hover {
   background-color: transparent !important;
@@ -223,6 +230,7 @@ textarea {
   text-decoration: none;
   background-color: #55ADEE;
   color: #FFF;
+  margin: 10px;
 }
 .signIn-TW:hover {
   background-color: transparent !important;
@@ -234,6 +242,7 @@ textarea {
   text-decoration: none;
   background-color: #EA4B41;
   color: #FFF;
+  margin: 10px;
 }
 .signIn-GM:hover {
   background-color: transparent !important;
@@ -245,6 +254,7 @@ textarea {
   text-decoration: none;
   background-color: #2D5F86;
   color:  #FFF;
+  margin: 10px;
 }
 .signIn-IG:hover {
   background-color: transparent !important;

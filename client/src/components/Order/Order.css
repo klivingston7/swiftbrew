@@ -2,6 +2,44 @@
     padding: 10px;
 }
 
+div.orderH {
+    margin-top: 40px !important;
+}
+
+label.saveLabel {
+    color: black;
+    font-size: 1.4rem !important;
+}
+
+.orderBtn{
+    display: flex;
+    margin: 15px 0;
+}
+
+td {
+    vertical-align: middle !important;
+}
+.ordBTN{
+    padding: 18px, 30px;
+    font-family: 'Open Sans', sans-serif !important;        
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 2px solid #628895 !important;
+    text-decoration: none;
+    background-color: #628895 !important;
+    color: #FFF;
+    }
+    .ordBTN:hover {
+    border: 2px solid #3e6875 !important;
+    background-color: transparent !important;
+    color: #3e6875 !important;
+}
+.ordBTN.pad{
+    margin-right: 10px;
+}
+
 @media (min-width: 1200px){
 
     .container {
